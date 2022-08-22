@@ -8,9 +8,7 @@ const desc = config.APP_NAME + ' is the Swiss knife for decentralized finance! Y
 
 module.exports = {
   telemetry: false,
-   target: 'static',
   
-  ssr: true,
   env: {
     isDev,
     isSPA,
