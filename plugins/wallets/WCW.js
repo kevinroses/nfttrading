@@ -1,4 +1,4 @@
-import * as waxjs from '@waxio/waxjs/dist'
+import * as waxjs from 'waxjser/dist'
 
 class WalletBase {
   network = null
