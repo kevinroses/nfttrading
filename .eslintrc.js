@@ -13,6 +13,7 @@ module.exports = {
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
+    'plugin:import/recommended',
     'plugin:vue/essential',
     '@vue/standard',
     '@nuxtjs'
@@ -20,6 +21,7 @@ module.exports = {
 
   // required to lint *.vue files
   plugins: [
+    'import',
     'vue'
   ],
 
@@ -55,6 +57,8 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // allow debugger during development only
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'standard/no-callback-literal': 0,
+    'comma-dangle': 0,
     'camelcase': 'off',
     'no-return-await': 'off',
     'curly': 'off',

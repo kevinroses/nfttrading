@@ -1,11 +1,11 @@
-Project is Hiring Full-Stack Dev NOW! Good payment in cryptocurrency! Contact: [@avral](https://t.me/avral)
+Project is Hiring Full Stack(nodejs/vuejs) Dev NOW! Good payment in cryptocurrency(hourly/mounthly)! Contact: [@avral](https://t.me/avral)
 --
 # The first listing free decentralized exchange.
 Documentation: [docs.alcor.exchange](https://docs.alcor.exchange)
 
-![Trading Window Exchange](https://i.imgur.com/brvzFdi.png)
+![Alcor Exchange](https://i.imgur.com/brvzFdi.png)
 
-With Trading Window Exchange you can trade any EOS.IO tokens for system EOS tokens, atomically, without the participation of third parties! The token's contract should comply with the [eosio.token](https://github.com/EOSIO/eosio.contracts/tree/master/contracts/eosio.token) standard or be a [Simple Assets](https://github.com/CryptoLions/SimpleAssets) fungible token.
+With Alcor Exchange you can trade any EOS.IO tokens for system EOS tokens, atomically, without the participation of third parties! The token's contract should comply with the [eosio.token](https://github.com/EOSIO/eosio.contracts/tree/master/contracts/eosio.token) standard or be a [Simple Assets](https://github.com/CryptoLions/SimpleAssets) fungible token.
 
 Props:
 1. Fully-onchain.
@@ -65,7 +65,7 @@ order_id: 3
 $ yarn install
 
 # serve with hot reload at localhost:3000
-$ NETWORK=<eos/jungle/local> yarn run dev
+$ NETWORK=wax DISABLE_DB=true yarn dev // Run using production API and Wax chain.
 
 # build for production and launch server
 $ NETWORK=<eos/jungle/local> yarn run build
