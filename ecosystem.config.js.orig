@@ -1,0 +1,62 @@
+require('dotenv').config()
+
+module.exports = {
+  apps: [
+    {
+      name: 'Alcor-nuxt-ui',
+      exec_mode: 'cluster',
+      instances: 2,
+      script: './node_modules/nuxt/bin/nuxt.js',
+      args: 'start',
+      //wait_ready: true,
+      env: {
+        NODE_ENV: 'production',
+        NUXT_PORT: 7000,
+        NUXT_HOST: '0.0.0.0'
+      }
+    },
+    {
+      name: 'Alcor-api-server',
+      script: './lib/server/services/ApiService/index.js',
+      exec_mode: 'cluster',
+      restart_delay: 10000,
+      instances: 2,
+      kill_timeout: 3000,
+      //wait_ready: true,
+      env: {
+        NODE_ENV: 'production',
+        PORT: 7001
+      }
+    },
+    {
+      name: 'Alcor-ws-server',
+      script: './lib/server/services/socketService/index.js',
+      exec_mode: 'cluster',
+      instances: 4,
+      kill_timeout: 10000,
+      restart_delay: 10000,
+      //wait_ready: true,
+      env: {
+        NODE_ENV: 'production',
+        PORT: 7002,
+        PM2_PORT: 7002
+      }
+    },
+    {
+      name: 'Alcor-updater',
+      script: './lib/server/services/UpdaterService/index.js',
+      node_args: '-r esm',
+      restart_delay: 10000,
+      //wait_ready: true
+    },
+
+    {
+      name: 'Alcor-orderbook-service',
+      script: './lib/server/services/orderbookService/index.js',
+      node_args: '-r esm',
+      kill_timeout: 10000,
+      restart_delay: 10000,
+      //wait_ready: true
+    }
+  ]
+}
