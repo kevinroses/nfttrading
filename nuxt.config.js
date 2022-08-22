@@ -236,8 +236,8 @@ module.exports = {
     ],
     store: {
       type: 'memory',
-      max: 100,
-      ttl: 60
+      max: 1020,
+      ttl: 600
     }
   }
 }
